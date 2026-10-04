@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.A.M. Public School - Annual Report Card 2024-25</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter & Tiro Gurmukhi -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tiro+Gurmukhi:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .punjabi-font {
+            font-family: 'Tiro Gurmukhi', serif;
+        }
+        /* Print styles for multi-page A4 output */
+        @media print {
+            body {
+                background-color: #ffffff;
+                margin: 0;
+                padding: 0;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .page-container {
+                box-shadow: none !important;
+                margin: 0 !important;
+                padding: 10mm !important;
+                width: 100% !important;
+                min-height: 297mm !important;
+                page-break-after: always;
+                break-after: page;
+            }
+            .page-container:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+        .page-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-100 min-h-screen text-slate-800 flex flex-col items-center justify-start py-8">
+
+    <!-- Top Control Bar (No Print) -->
+    <header class="no-print w-full max-w-4xl bg-white p-4 mb-6 rounded-xl page-shadow flex flex-wrap items-center justify-between gap-4">
+        <div>
+            <h1 class="text-xl font-bold text-slate-900">M.A.M. Public School Report Card Studio</h1>
+            <p class="text-xs text-slate-500">Session 2024-25 | Official Multi-Page A4 Report</p>
+        </div>
+        <div class="flex items-center gap-3">
+            <button onclick="openEditorModal()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg shadow transition flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                Edit Data
+            </button>
+            <button onclick="window.print()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-lg shadow transition flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                Print / Save PDF
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Document Wrapper -->
+    <main class="w-full max-w-[210mm] flex flex-col gap-8">
+
+        <!-- PAGE 1: School Header & Academic Performance -->
+        <div class="page-container bg-white w-[210mm] min-h-[297mm] mx-auto p-8 page-shadow flex flex-col justify-between text-xs relative box-border">
+            <div>
+                <!-- School Header -->
+                <div class="border-b-2 border-slate-800 pb-4 mb-4 flex items-center justify-between gap-4">
+                    <!-- Left Emblem -->
+                    <div class="flex flex-col items-center border border-slate-800 p-2 rounded w-28 text-center bg-slate-50">
+                        <svg class="w-12 h-12 text-slate-700 mb-1" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm0 18c-3.73-1.11-6-4.9-6-9V8.3l6-3.33 6 3.33V11c0 4.1-2.27 7.89-6 9z"/>
+                        </svg>
+                        <span class="text-[9px] font-bold uppercase tracking-tighter leading-tight">Victory With Determination</span>
+                        <span class="text-[10px] font-extrabold mt-1">M.A.M.</span>
+                    </div>
+
+                    <!-- Center Titles -->
+                    <div class="text-center flex-1">
+                        <h2 class="punjabi-font text-lg font-bold text-slate-900 leading-tight">ਮੈਕਸ ਆਰਥਰ ਮੈਕਾਲਿਫ ਪਬਲਿਕ ਸੀਨੀਅਰ ਸੈਕੰਡਰੀ ਸਕੂਲ, ਸਮਰਾਲਾ</h2>
+                        <h1 class="text-base font-extrabold text-slate-900 tracking-wide uppercase mt-0.5">Max Arthur Macauliffe Public Sen. Sec. School</h1>
+                        <p class="text-[10px] font-medium text-slate-700 mt-0.5">CHANDIGARH ROAD VILL. BONDLI, SAMRALA, LUDHIANA, PUNJAB</p>
+                        <p class="text-[10px] font-semibold text-slate-800 mt-0.5">AFFILIATED TO CBSE, NEW DELHI (AFFILIATION NO. 1630775)</p>
+                        <p class="text-[9px] text-slate-600 mt-0.5">Contact No. : +91 82838-22326, 01628-263853 | Website : www.mampublicschool.com</p>
+                    </div>
+
+                    <!-- Right Emblem -->
+                    <div class="flex flex-col items-center border border-slate-800 p-2 rounded w-28 text-center bg-slate-50">
+                        <div class="w-12 h-12 rounded-full border-2 border-slate-700 flex items-center justify-center bg-slate-200 mb-1">
+                            <span class="text-[10px] font-bold text-slate-800">CBSE</span>
+                        </div>
+                        <span class="text-[8px] font-bold uppercase tracking-tighter leading-tight">केन्द्रीय माध्यमिक शिक्षा बोर्ड</span>
+                    </div>
+                </div>
+
+                <!-- Report Card Title Bar -->
+                <div class="bg-slate-200 text-slate-900 font-bold text-center py-1.5 mb-4 rounded border border-slate-300 text-sm tracking-wide">
+                    Annual Report Card (Session 2024-25)
+                </div>
+
+                <!-- Student Info Block -->
+                <div class="grid grid-cols-2 gap-x-6 gap-y-1.5 p-3 bg-slate-50 border border-slate-300 rounded mb-5 text-[11px]">
+                    <div><span class="font-bold text-slate-700">Student's Name :</span> <span id="lbl-name" class="font-semibold text-slate-900 uppercase">GURWINDER SINGH</span></div>
+                    <div><span class="font-bold text-slate-700">Class :</span> <span id="lbl-class" class="font-semibold text-slate-900">1st</span></div>
+                    <div><span class="font-bold text-slate-700">Father's Name :</span> <span id="lbl-father" class="font-semibold text-slate-900 uppercase">KULWINDER SINGH</span></div>
+                    <div><span class="font-bold text-slate-700">Section :</span> <span id="lbl-section" class="font-semibold text-slate-900">Moon</span></div>
+                    <div><span class="font-bold text-slate-700">Mother's Name :</span> <span id="lbl-mother" class="font-semibold text-slate-900 uppercase">SATWINDER KAUR</span></div>
+                    <div><span class="font-bold text-slate-700">Admission No. :</span> <span id="lbl-adm" class="font-semibold text-slate-900">2138</span></div>
+                    <div><span class="font-bold text-slate-700">D.O.B. :</span> <span id="lbl-dob" class="font-semibold text-slate-900">19-12-2016</span></div>
+                </div>
+
+                <!-- Academic Performance Table -->
+                <div class="mb-4">
+                    <div class="font-bold text-slate-900 text-xs mb-1 flex items-center justify-between">
+                        <span>Academic Performance — Marks (Out of 100)</span>
+                        <span class="text-[10px] font-normal text-slate-500">Q1 = Quarter 1 (Apr-June) | Q2 = Quarter 2 (July-Sept) | Q3 = Quarter 3 (Oct-Dec) | Q4 = Quarter 4 (Jan-Mar)</span>
+                    </div>
+                    <table class="w-full border-collapse border border-slate-300 text-[10px]">
+                        <thead>
+                            <tr class="bg-slate-200 text-slate-800 text-left">
+                                <th class="border border-slate-300 p-1.5 w-1/4 font-bold">Subject</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold bg-amber-100">Q1 Marks (50)</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Q2 Marks (100)</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Q3 Marks (50)</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Q4 Marks (100)</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Total / Avg</th>
+                            </tr>
+                        </thead>
+                        <tbody id="academic-tbody">
+                            <!-- Populated via JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Quarterly Rank Table -->
+                <div class="mb-4">
+                    <div class="font-bold text-slate-900 text-xs mb-1">Quarterly Rank</div>
+                    <table class="w-full border-collapse border border-slate-300 text-[10px]">
+                        <thead>
+                            <tr class="bg-slate-200 text-slate-800">
+                                <th class="border border-slate-300 p-1.5 w-1/4 text-left font-bold">Category</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Q1</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Q2</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Q3</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Q4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-slate-300 p-1 font-medium">Class Rank</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-300 p-1 font-medium">Total Students</td>
+                                <td class="border border-slate-300 p-1 text-center">35</td>
+                                <td class="border border-slate-300 p-1 text-center">35</td>
+                                <td class="border border-slate-300 p-1 text-center">35</td>
+                                <td class="border border-slate-300 p-1 text-center">35</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-300 p-1 font-medium">Grade Awarded</td>
+                                <td class="border border-slate-300 p-1 text-center">A</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Skills & Conduct Assessment (Part 1) -->
+                <div>
+                    <div class="font-bold text-slate-900 text-xs mb-1 flex items-center justify-between">
+                        <span>Skills & Conduct Assessment</span>
+                        <span class="text-[9px] font-normal text-slate-600">Grading Scale: A = Excellent | B = Good | C = Satisfactory | D = Needs Improvement | E = Unsatisfactory</span>
+                    </div>
+                    <table class="w-full border-collapse border border-slate-300 text-[10px]">
+                        <thead>
+                            <tr class="bg-slate-200 text-slate-800">
+                                <th class="border border-slate-300 p-1.5 w-2/5 text-left font-bold">Skill / Attribute</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Q1 Grade</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Q2 Grade</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Q3 Grade</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Q4 Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-slate-300 p-1 font-medium">Communication Skills</td>
+                                <td class="border border-slate-300 p-1 text-center font-bold">A</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-300 p-1 font-medium">Behaviour & Discipline</td>
+                                <td class="border border-slate-300 p-1 text-center font-bold">A</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-300 p-1 font-medium">School Uniform & Appearance</td>
+                                <td class="border border-slate-300 p-1 text-center font-bold">A+</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="text-right text-[9px] text-slate-400 mt-4 border-t pt-1">
+                Page 1 of 4 | M.A.M. Public School Annual Report Card
+            </div>
+        </div>
+
+        <!-- PAGE 2: Skills Continuation, Attendance Record & Signatures -->
+        <div class="page-container bg-white w-[210mm] min-h-[297mm] mx-auto p-8 page-shadow flex flex-col justify-between text-xs relative box-border">
+            <div>
+                <!-- Top Header reminder -->
+                <div class="text-right text-[10px] text-slate-500 mb-4 border-b pb-2 font-medium">
+                    M.A.M. Public School — Report Card (Session 2024-25) | Student: <span class="header-student-name font-bold">GURWINDER SINGH</span>
+                </div>
+
+                <!-- Skills & Conduct Assessment (Part 2) -->
+                <div class="mb-5">
+                    <div class="font-bold text-slate-900 text-xs mb-1">Skills & Conduct Assessment (Continued)</div>
+                    <table class="w-full border-collapse border border-slate-300 text-[10px]">
+                        <thead>
+                            <tr class="bg-slate-200 text-slate-800">
+                                <th class="border border-slate-300 p-1.5 w-2/5 text-left font-bold">Skill / Attribute</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Q1 Grade</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Q2 Grade</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Q3 Grade</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Q4 Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-slate-300 p-1 font-medium">Planner Management</td>
+                                <td class="border border-slate-300 p-1 text-center font-bold">A</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-300 p-1 font-medium">Class Participation</td>
+                                <td class="border border-slate-300 p-1 text-center font-bold">A</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-300 p-1 font-medium">Homework Completion</td>
+                                <td class="border border-slate-300 p-1 text-center font-bold">A</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-300 p-1 font-medium">Teamwork & Collaboration</td>
+                                <td class="border border-slate-300 p-1 text-center font-bold">A</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-300 p-1 font-medium">Respect for Others</td>
+                                <td class="border border-slate-300 p-1 text-center font-bold">A+</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Attendance Record -->
+                <div class="mb-6">
+                    <div class="font-bold text-slate-900 text-xs mb-1">Attendance Record</div>
+                    <p class="text-[9px] text-slate-600 mb-1 italic">Note: A minimum of 75% attendance is required as per CBSE norms. Students falling below this threshold may be detained from appearing in Board Examinations.</p>
+                    <table class="w-full border-collapse border border-slate-300 text-[10px]">
+                        <thead>
+                            <tr class="bg-slate-200 text-slate-800">
+                                <th class="border border-slate-300 p-1.5 w-1/3 text-left font-bold">Attendance Category</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Q1</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Q2</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Q3</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Q4</th>
+                                <th class="border border-slate-300 p-1.5 text-center font-bold">Full Year Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-slate-300 p-1 font-medium">Total School Days</td>
+                                <td class="border border-slate-300 p-1 text-center">54</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center font-bold">54</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-300 p-1 font-medium">Days Present</td>
+                                <td class="border border-slate-300 p-1 text-center">52</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center font-bold">52</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-300 p-1 font-medium">Notified Absence Days</td>
+                                <td class="border border-slate-300 p-1 text-center">2</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center font-bold">2</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-300 p-1 font-medium">Unnotified Absence Days</td>
+                                <td class="border border-slate-300 p-1 text-center">0</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center font-bold">0</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="border border-slate-300 p-1 font-bold">Attendance Percentage (%)</td>
+                                <td class="border border-slate-300 p-1 text-center font-bold text-emerald-700">96.3%</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center">-</td>
+                                <td class="border border-slate-300 p-1 text-center font-bold text-emerald-700">96.3%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Signatures Block -->
+                <div class="mt-8">
+                    <div class="font-bold text-slate-900 text-xs mb-2">Signatures</div>
+                    <div class="grid grid-cols-3 gap-6 pt-2">
+                        <div class="border-t border-slate-400 pt-2 text-[11px]">
+                            <p class="font-bold text-slate-800">Class Teacher</p>
+                            <p class="mt-4 text-slate-600">Name: <span class="border-b border-dotted border-slate-500 inline-block w-32">&nbsp;Ms. Simranjit Kaur&nbsp;</span></p>
+                            <p class="mt-2 text-slate-600">Signature: ........................</p>
+                            <p class="mt-2 text-slate-600">Date: 30-06-2024</p>
+                        </div>
+                        <div class="border-t border-slate-400 pt-2 text-[11px]">
+                            <p class="font-bold text-slate-800">Principal</p>
+                            <p class="mt-4 text-slate-600">Name: <span class="border-b border-dotted border-slate-500 inline-block w-32">&nbsp;Dr. R. K. Sharma&nbsp;</span></p>
+                            <p class="mt-2 text-slate-600">Signature: ........................</p>
+                            <p class="mt-2 text-slate-600">Date: 01-07-2024</p>
+                        </div>
+                        <div class="border-t border-slate-400 pt-2 text-[11px]">
+                            <p class="font-bold text-slate-800">Parent / Guardian</p>
+                            <p class="mt-4 text-slate-600">Name: <span class="border-b border-dotted border-slate-500 inline-block w-32">&nbsp;Kulwinder Singh&nbsp;</span></p>
+                            <p class="mt-2 text-slate-600">Signature: ........................</p>
+                            <p class="mt-2 text-slate-600">Date: 02-07-2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-right text-[9px] text-slate-400 mt-4 border-t pt-1">
+                Page 2 of 4 | M.A.M. Public School Annual Report Card
+            </div>
+        </div>
+
+        <!-- PAGE 3: Teacher Comments - Quarter 1 -->
+        <div class="page-container bg-white w-[210mm] min-h-[297mm] mx-auto p-8 page-shadow flex flex-col justify-between text-xs relative box-border">
+            <div>
+                <!-- Top Header reminder -->
+                <div class="text-right text-[10px] text-slate-500 mb-4 border-b pb-2 font-medium">
+                    M.A.M. Public School — Report Card (Session 2024-25) | Student: <span class="header-student-name font-bold">GURWINDER SINGH</span>
+                </div>
+
+                <div class="bg-indigo-50 border-l-4 border-indigo-600 p-2 font-bold text-indigo-900 text-sm mb-4">
+                    Teacher Comments — Quarter 1
+                </div>
+
+                <!-- Student brief meta -->
+                <div class="grid grid-cols-3 gap-4 mb-4 p-2.5 bg-slate-50 border border-slate-300 rounded text-[11px]">
+                    <div><span class="font-bold text-slate-700">Student Name:</span> <span class="header-student-name font-semibold text-slate-900">GURWINDER SINGH</span></div>
+                    <div><span class="font-bold text-slate-700">Class & Section:</span> <span class="font-semibold text-slate-900">1st Moon</span></div>
+                    <div><span class="font-bold text-slate-700">Roll No:</span> <span class="font-semibold text-slate-900">14</span></div>
+                </div>
+
+                <!-- Class Teacher Comments Box -->
+                <div class="mb-5 border border-slate-300 rounded p-3">
+                    <div class="font-bold text-slate-900 mb-2">Class Teacher Comments</div>
+                    <div class="mb-3">
+                        <span class="font-semibold text-slate-700 block text-[11px] mb-1">Areas of Strength:</span>
+                        <p class="text-slate-800 italic bg-slate-50 p-2 rounded border border-slate-200">Gurwinder is an enthusiastic learner with excellent grasping power in mathematics and active participation in class discussions.</p>
+                    </div>
+                    <div class="mb-3">
+                        <span class="font-semibold text-slate-700 block text-[11px] mb-1">Areas for Improvement:</span>
+                        <p class="text-slate-800 italic bg-slate-50 p-2 rounded border border-slate-200">Needs to focus slightly more on handwriting neatness and spelling in Hindi vocabulary.</p>
+                    </div>
+                    <div class="flex justify-between items-center text-[11px] text-slate-600 pt-2 border-t border-slate-200 mt-2">
+                        <span>Class Teacher Name: <b>Ms. Simranjit Kaur</b></span>
+                        <span>Signature: ..................</span>
+                        <span>Date: 30-06-2024</span>
+                    </div>
+                </div>
+
+                <!-- Subject Teacher Comments Table -->
+                <div class="mb-4">
+                    <div class="font-bold text-slate-900 text-xs mb-1">Subject Teacher Comments</div>
+                    <p class="text-[9px] text-slate-600 mb-2 italic">Please provide subject-specific observations and recommendations for the student's academic development during Quarter 1.</p>
+                    <table class="w-full border-collapse border border-slate-300 text-[10px]">
+                        <thead>
+                            <tr class="bg-slate-200 text-slate-800">
+                                <th class="border border-slate-300 p-1.5 w-1/4 text-left font-bold">Subject</th>
+                                <th class="border border-slate-300 p-1.5 text-left font-bold">Subject Teacher's Comments</th>
+                                <th class="border border-slate-300 p-1.5 w-28 text-center font-bold">Teacher's Signature</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-slate-300 p-2 font-bold">English</td>
+                                <td class="border border-slate-300 p-2 text-slate-700">Shows wonderful reading fluency and expressive recitation skills. Keep it up!</td>
+                                <td class="border border-slate-300 p-2 text-center text-slate-500">Verified</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-300 p-2 font-bold">Hindi</td>
+                                <td class="border border-slate-300 p-2 text-slate-700">Good attempt in writing matras. Needs regular practice at home.</td>
+                                <td class="border border-slate-300 p-2 text-center text-slate-500">Verified</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-300 p-2 font-bold">Mathematics</td>
+                                <td class="border border-slate-300 p-2 text-slate-700">Excellent logical reasoning and fast calculation skills in addition/subtraction.</td>
+                                <td class="border border-slate-300 p-2 text-center text-slate-500">Verified</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-300 p-2 font-bold">Science</td>
+                                <td class="border border-slate-300 p-2 text-slate-700">Curious and inquisitive during nature walks and science activities.</td>
+                                <td class="border border-slate-300 p-2 text-center text-slate-500">Verified</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-300 p-2 font-bold">Social Studies</td>
+                                <td class="border border-slate-300 p-2 text-slate-700">Understands community helpers and surroundings well. Good map orientation.</td>
+                                <td class="border border-slate-300 p-2 text-center text-slate-500">Verified</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-300 p-2 font-bold">Computer Science</td>
+                                <td class="border border-slate-300 p-2 text-slate-700">Very comfortable with mouse operations and basic educational games.</td>
+                                <td class="border border-slate-300 p-2 text-center text-slate-500">Verified</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-300 p-2 font-bold">Physical Education</td>
+                                <td class="border border-slate-300 p-2 text-slate-700">Energetic, disciplined, and participates enthusiastically in all sports drills.</td>
+                                <td class="border border-slate-300 p-2 text-center text-slate-500">Verified</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="text-right text-[9px] text-slate-400 mt-4 border-t pt-1">
+                Page 3 of 4 | M.A.M. Public School Annual Report Card
+            </div>
+        </div>
+
+        <!-- PAGE 4: Parent / Guardian Acknowledgement -->
+        <div class="page-container bg-white w-[210mm] min-h-[297mm] mx-auto p-8 page-shadow flex flex-col justify-between text-xs relative box-border">
+            <div>
+                <!-- Top Header reminder -->
+                <div class="text-right text-[10px] text-slate-500 mb-6 border-b pb-2 font-medium">
+                    M.A.M. Public School — Report Card (Session 2024-25) | Student: <span class="header-student-name font-bold">GURWINDER SINGH</span>
+                </div>
+
+                <div class="bg-indigo-50 border-l-4 border-indigo-600 p-2 font-bold text-indigo-900 text-sm mb-6">
+                    Parent / Guardian Acknowledgement
+                </div>
+
+                <!-- Remarks Input Area -->
+                <div class="mb-6 border border-slate-300 rounded p-4 bg-slate-50">
+                    <label class="block font-bold text-slate-800 mb-2">Parent / Guardian Remarks (Optional):</label>
+                    <div class="h-20 border-b border-dashed border-slate-400 mb-2"></div>
+                    <div class="h-10 border-b border-dashed border-slate-400"></div>
+                </div>
+
+                <!-- Confidentiality Notice -->
+                <div class="p-4 bg-slate-100 border border-slate-300 rounded mb-8 text-[11px] leading-relaxed text-slate-700">
+                    <p class="font-bold text-slate-900 mb-1">Confidentiality & Compliance Notice:</p>
+                    <p>This report is confidential and intended solely for the student and their parent/guardian. Please retain this document for your records.</p>
+                    <p class="mt-2 font-semibold text-slate-800">M.A.M. Public School | Chandigarh Road, Bondli – Samrala, Dist. Ludhiana, Punjab | *Victory With Determination*</p>
+                    <p class="mt-2 italic">I have read and understood the contents of this Quarter 1 Progress Report for my ward.</p>
+                </div>
+
+                <!-- Acknowledgement Sign-off Box -->
+                <div class="border border-slate-300 rounded p-6 bg-white mt-12">
+                    <div class="grid grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <span class="block text-slate-600 font-semibold mb-1">Parent / Guardian Name:</span>
+                            <div class="border-b border-slate-800 pb-1 font-bold text-slate-900 text-sm">Kulwinder Singh</div>
+                        </div>
+                        <div>
+                            <span class="block text-slate-600 font-semibold mb-1">Relationship to Student:</span>
+                            <div class="border-b border-slate-800 pb-1 font-bold text-slate-900 text-sm">Father</div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8 pt-4">
+                        <div>
+                            <span class="block text-slate-600 font-semibold mb-1">Signature:</span>
+                            <div class="border-b border-slate-800 pb-1 h-10 flex items-end font-serif italic text-slate-800">Kulwinder Singh</div>
+                        </div>
+                        <div>
+                            <span class="block text-slate-600 font-semibold mb-1">Date:</span>
+                            <div class="border-b border-slate-800 pb-1 font-bold text-slate-900 text-sm">02-07-2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Notes -->
+            <div>
+                <div class="text-center p-4 bg-emerald-50 border border-emerald-200 rounded text-emerald-800 font-medium text-[11px] mb-4">
+                    Thank you for partnering with M.A.M. Public School in your child's holistic educational journey.
+                </div>
+                <div class="text-right text-[9px] text-slate-400 border-t pt-1">
+                    Page 4 of 4 | M.A.M. Public School Annual Report Card
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Edit Modal (No Print) -->
+    <div id="edit-modal" class="no-print fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-xl shadow-2xl max-w-lg w-full p-6 max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-200 mb-4">
+                <h3 class="text-lg font-bold text-slate-900">Edit Student Details & Marks</h3>
+                <button onclick="closeEditorModal()" class="text-slate-400 hover:text-slate-700 text-xl font-bold">&times;</button>
+            </div>
+            <form id="report-form" onsubmit="saveReportData(event)" class="space-y-4 text-xs">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">Student Name</label>
+                        <input type="text" id="input-name" class="w-full border border-slate-300 rounded p-2" value="GURWINDER SINGH">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">Class</label>
+                        <input type="text" id="input-class" class="w-full border border-slate-300 rounded p-2" value="1st">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">Father's Name</label>
+                        <input type="text" id="input-father" class="w-full border border-slate-300 rounded p-2" value="KULWINDER SINGH">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">Mother's Name</label>
+                        <input type="text" id="input-mother" class="w-full border border-slate-300 rounded p-2" value="SATWINDER KAUR">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">Section</label>
+                        <input type="text" id="input-section" class="w-full border border-slate-300 rounded p-2" value="Moon">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">Admission No.</label>
+                        <input type="text" id="input-adm" class="w-full border border-slate-300 rounded p-2" value="2138">
+                    </div>
+                </div>
+                <div class="pt-4 border-t border-slate-200 flex justify-end gap-3">
+                    <button type="button" onclick="closeEditorModal()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold rounded-lg">Cancel</button>
+                    <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Initial Subject Data for Academic Performance
+        const subjectsData = [
+            { name: "English", q1: 44, q2: "-", q3: "-", q4: "-" },
+            { name: "Hindi", q1: 40, q2: "-", q3: "-", q4: "-" },
+            { name: "Mathematics", q1: 48, q2: "-", q3: "-", q4: "-" },
+            { name: "Science", q1: 42, q2: "-", q3: "-", q4: "-" },
+            { name: "Social Studies", q1: 43, q2: "-", q3: "-", q4: "-" },
+            { name: "Computer Science", q1: 46, q2: "-", q3: "-", q4: "-" },
+            { name: "Physical Education", q1: 45, q2: "-", q3: "-", q4: "-" }
+        ];
+
+        function renderAcademicTable() {
+            const tbody = document.getElementById('academic-tbody');
+            tbody.innerHTML = '';
+            let totalQ1 = 0;
+            let countQ1 = 0;
+
+            subjectsData.forEach((subj, index) => {
+                if (typeof subj.q1 === 'number') {
+                    totalQ1 += subj.q1;
+                    countQ1++;
+                }
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="border border-slate-300 p-1.5 font-bold text-slate-800">${subj.name}</td>
+                    <td class="border border-slate-300 p-1.5 text-center font-bold bg-amber-50">
+                        <input type="number" min="0" max="50" value="${subj.q1}" onchange="updateMark(${index}, 'q1', this.value)" class="w-12 text-center border rounded p-0.5 text-xs bg-white">
+                    </td>
+                    <td class="border border-slate-300 p-1.5 text-center text-slate-500">${subj.q2}</td>
+                    <td class="border border-slate-300 p-1.5 text-center text-slate-500">${subj.q3}</td>
+                    <td class="border border-slate-300 p-1.5 text-center text-slate-500">${subj.q4}</td>
+                    <td class="border border-slate-300 p-1.5 text-center font-bold text-indigo-700">${typeof subj.q1 === 'number' ? subj.q1 + '/50' : '-'}</td>
+                `;
+                tbody.appendChild(row);
+            });
+
+            // Total Row
+            const totalRow = document.createElement('tr');
+            totalRow.className = "bg-slate-100 font-bold";
+            totalRow.innerHTML = `
+                <td class="border border-slate-300 p-1.5">**Total**</td>
+                <td class="border border-slate-300 p-1.5 text-center bg-amber-100 text-indigo-900">${totalQ1} / 350</td>
+                <td class="border border-slate-300 p-1.5 text-center">-</td>
+                <td class="border border-slate-300 p-1.5 text-center">-</td>
+                <td class="border border-slate-300 p-1.5 text-center">-</td>
+                <td class="border border-slate-300 p-1.5 text-center text-indigo-900">${totalQ1} / 350</td>
+            `;
+            tbody.appendChild(totalRow);
+
+            // Percentage Row
+            const percentage = ((totalQ1 / 350) * 100).toFixed(1);
+            const percRow = document.createElement('tr');
+            percRow.className = "bg-slate-200 font-bold";
+            percRow.innerHTML = `
+                <td class="border border-slate-300 p-1.5">**Percentage**</td>
+                <td class="border border-slate-300 p-1.5 text-center bg-amber-200 text-emerald-800">${percentage}%</td>
+                <td class="border border-slate-300 p-1.5 text-center">-</td>
+                <td class="border border-slate-300 p-1.5 text-center">-</td>
+                <td class="border border-slate-300 p-1.5 text-center">-</td>
+                <td class="border border-slate-300 p-1.5 text-center text-emerald-800">${percentage}%</td>
+            `;
+            tbody.appendChild(percRow);
+        }
+
+        function updateMark(index, field, value) {
+            subjectsData[index][field] = value === '' ? '-' : Number(value);
+            renderAcademicTable();
+        }
+
+        function openEditorModal() {
+            document.getElementById('edit-modal').classList.remove('hidden');
+            document.getElementById('edit-modal').classList.add('flex');
+        }
+
+        function closeEditorModal() {
+            document.getElementById('edit-modal').classList.remove('flex');
+            document.getElementById('edit-modal').classList.add('hidden');
+        }
+
+        function saveReportData(e) {
+            e.preventDefault();
+            const name = document.getElementById('input-name').value;
+            const cls = document.getElementById('input-class').value;
+            const father = document.getElementById('input-father').value;
+            const mother = document.getElementById('input-mother').value;
+            const section = document.getElementById('input-section').value;
+            const adm = document.getElementById('input-adm').value;
+
+            document.getElementById('lbl-name').innerText = name;
+            document.getElementById('lbl-class').innerText = cls;
+            document.getElementById('lbl-father').innerText = father;
+            document.getElementById('lbl-mother').innerText = mother;
+            document.getElementById('lbl-section').innerText = section;
+            document.getElementById('lbl-adm').innerText = adm;
+
+            document.querySelectorAll('.header-student-name').forEach(el => el.innerText = name);
+
+            closeEditorModal();
+        }
+
+        window.onload = function() {
+            renderAcademicTable();
+        };
+    </script>
+</body>
+</html>
