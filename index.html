@@ -16,9 +16,15 @@
         .punjabi-font {
             font-family: 'Tiro Gurmukhi', serif;
         }
-        /* Print styles for multi-page A4 output */
+        /* Keep the printed sheets at the same A4 size and spacing as the preview. */
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+
         @media print {
             body {
+                display: block !important;
                 background-color: #ffffff;
                 margin: 0;
                 padding: 0;
@@ -26,18 +32,27 @@
             .no-print {
                 display: none !important;
             }
+            main {
+                display: block !important;
+                width: 210mm !important;
+                max-width: 210mm !important;
+                gap: 0 !important;
+                margin: 0 auto !important;
+            }
             .page-container {
+                display: block !important;
                 box-shadow: none !important;
                 margin: 0 !important;
-                padding: 10mm !important;
-                width: 100% !important;
-                min-height: 297mm !important;
-                page-break-after: always;
-                break-after: page;
+                padding: 2rem !important;
+                width: 210mm !important;
+                height: auto !important;
+                min-height: 0 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
-            .page-container:last-child {
-                page-break-after: avoid;
-                break-after: avoid;
+            .page-container:not(:first-child) {
+                page-break-before: always;
+                break-before: page;
             }
         }
         .page-shadow {
